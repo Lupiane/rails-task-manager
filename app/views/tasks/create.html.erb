@@ -1,3 +1,8 @@
-<h1>New task created:</h1>
-<p><%= @task.name %>, deadline: <%= @task.deadline %>, completed: <%= @task.completed %></p>
-<%= link_to "Back to task list", tasks_path %>
+<div class="wrapper">
+  <div class="container">
+  <h2>New task created:</h2>
+  <p><%= @task.name %>, deadline: <%= @task.deadline %>, completed: <%= @task.completed %></p>
+  <%= link_to "Back to task list", tasks_path %>
+  </div>
+</div>
+

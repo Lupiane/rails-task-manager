@@ -1,5 +1,16 @@
-<h1><%= @task.name %></h1>
-<h3>Deadline : <%= @task.deadline %></h3>
-<h3>Completed? <%= @task.completed %></h3>
+<div class="wrapper">
+  <div class="container">
+    <h2><%= @task.name %></h2>
+    <h3>Deadline : <%= @task.deadline %></h3>
+    <h3>Completed?
+      <% if @task.completed == true %>
+        <i class="fa fa-check" aria-hidden="true"></i>
+      <% else %>
+        <i class="fa fa-times" aria-hidden="true"></i>
+      <% end %>
+    </h3>
+    <%= link_to "Back to task list", tasks_path %>
+  </div>
+</div>
 
-<%= link_to "Back to task list", tasks_path %>
+
